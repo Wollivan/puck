@@ -1,10 +1,16 @@
 use <../assets/AmaticSC.ttf>
+$fn = 300;
+puckHeight = 13;
+puckDiameter = 35;
 
-difference() {
-  color("#333")cylinder(h=13, d=35, $fn=300);
+puck();
 
-  color("#000")translate([0, 0, 12.5])
-    linear_extrude(height=1)
-      text(text="WTP", size=10, halign="center", valign="center", font="AmaticSC");
+module puck() {
+  difference() {
+    cylinder(h=puckHeight, d=puckDiameter);
 
+    translate([0, 0, 12.5])
+      linear_extrude(height=1)
+        text(text="WTP", size=10, halign="center", valign="center", font="AmaticSC");
+  }
 }
