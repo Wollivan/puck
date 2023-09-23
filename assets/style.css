@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Amatic SC";
+  src: url("./AmaticSC.ttf");
+}
+
+* {
+  font-family: "Amatic SC", cursive;
+  background-color: #faf9f6;
+  color: #333;
+}
+
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 2rem;
+  padding: 0 2rem;
+}
+
+img {
+  max-width: 300px;
+  width: 70%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 2px solid #333;
+  padding-bottom: 3px;
+}
+a:hover {
+  font-weight: bold;
+}
