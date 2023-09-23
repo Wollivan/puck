@@ -1,5 +1,7 @@
 # What the Puck Game
 
+ <img src="./assets//puck.png" />
+ 
 ## What you need to play the game
 
 You only need **2** things to play:
