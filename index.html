@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <title>What the Puck?!</title>
-  </head>
-  <body>
-    <h1>What the Puck?!&trade;</h1>
-    <img src="./assets//puck.png" />
-    <h2>What you need to play the game</h2>
-    <p>You only need <strong>2</strong> things to play:</p>
-    <ul>
-      <li>A <strong>puck</strong></li>
-      <li>A table</li>
-    </ul>
-    <p>
-      If you have a 3D printer, you can download the
-      <a href="./puck/puck.stl" download>offical puck here</a>.
-    </p>
-    <p>If you have Pucket&trade;, then the pucks are a similar size.</p>
-    <p>Failing that, just cut a 13mm piece of a 35mm dowel.</p>
-    <h2>Rules</h2>
-    <p>Two players either side of a table.</p>
 
-    <p>One player spins the puck towards their opponent.</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./model-viewer/styles.css" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script src="./assets/script.js" defer></script>
+  <title>Puck</title>
+  <meta name="description" content="What the Puck?!">
+  <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+</head>
 
-    <p>The opponent then attempts to catch the puck between their thumbs.</p>
+<body>
+  <h1>Puck&trade;</h1>
+  <h3>What the Puck?!</h3>
+  <model-viewer src="./model-viewer/puck.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+    tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+    <div id="ar-prompt">
+      <img src="./model-viewer/ar_hand_prompt.png">
+    </div>
+  </model-viewer>
 
-    <p>
-      If they are successful, the spinner chooses rugby or football, and creates
-      a goal with Thier hands at the edge of the table.
-    </p>
+  <h2>What you need to play the game</h2>
+  <p>You only need <strong>2</strong> things to play:</p>
+  <ul>
+    <li>A <strong>puck</strong></li>
+    <li>A table</li>
+  </ul>
+  <p>
+    If you have a 3D printer, you can download the
+    <a href="./puck/puck.stl" download>offical Puck&trade; puck here</a>.
+  </p>
+  <p>If you have Pucket&trade;, then the pucks are a similar (the exact same) size.</p>
+  <p>Failing that, just cut a 13mm piece of a 35mm dowel.</p>
+  <h2>Rules</h2>
+  <p>Two players either side of a table.</p>
+  <p>One player spins the puck towards their opponent.</p>
+  <p>The opponent then attempts to catch the puck between their thumbs.</p>
+  <p>
+    If they are successful in catching with only their thumbs, the opponent creates
+    a goal with thier hands at the edge of the table.
+  </p>
 
-    <p>
-      They then try and shoot a goal from where they caught the ball, in the
-      position their thumns caught it.
-    </p>
+  <p>
+    They then try and shoot a goal from where they caught the ball, without repositioning the puck between their thumbs
+    from when they caught it.
+  </p>
 
-    <p>The spinner and shooter then swap.</p>
+  <p>The spinner and shooter then swap.</p>
 
-    <p>First to 5 wins.</p>
+  <p>First to 5 wins.</p>
 
-    <h3>Note - Advantage Rule</h3>
-    <p>
-      If the spinner spins the puck off the table, the shooter then has
-      advantage. The spinner then spins again, but if the catcher misses/drops
-      the puck they get another spin to try again.
-    </p>
+  <h2>Things of note</h2>
+  <h3>Advantage Rule</h3>
+  <p>
+    If the spinner spins the puck off the table, the shooter then has
+    advantage. The spinner then spins again, but if the catcher misses/drops
+    the puck they get another spin to try again.
+  </p>
 
-    <h2>Puck Model</h2>
+  <h3>How to make a goal</h3>
+  <img src="./assets/fingergoal.png" class="finger-goal-img" alt="finger goal example" />
+  <h3>Dropped the puck before getting to shoot?</h3>
+  <p>Tough luck, so long as your opponent created a goal for you right away.</p>
 
-    <p>
-      You can create your own puck by editing the OpenSCAD model found
-      <a href="./puck/puck.scad" download>here</a>.
-    </p>
-  </body>
+
+  <h3>Fingers are not thumbs</h3>
+  <p>If any other part of your hand touches the puck, its not a catch.</p>
+
+  <h2>Custom Puck&trade;s</h2>
+  <p>
+    You can create your own puck by editing the OpenSCAD model found
+    <a href="./puck/puck.scad" download>here</a>.
+  </p>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</body>
+
 </html>
