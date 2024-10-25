@@ -15,19 +15,21 @@
 
 <body>
   <h1>Puck&trade;</h1>
-  <h3>What the Puck?!</h3>
+  <h3>A game by Wollivan, what the puck?!</h3>
   <model-viewer src="./model-viewer/puck.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-    tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+    tone-mapping="neutral" poster="poster.webp" shadow-intensity="0" camera-target="0m 6.5m 0m"
+    camera-orbit="20deg 60.5deg 73.59m" field-of-view="31.97deg" auto-rotate>
     <div class="progress-bar hide" slot="progress-bar">
       <div class="update-bar"></div>
     </div>
-    <!-- <button slot="ar-button" id="ar-button">
+    <button slot="ar-button" id="ar-button">
       View in your space
     </button>
     <div id="ar-prompt">
-      <img src="./model-viewer/ar_hand_prompt.png">
-    </div> -->
+      <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
   </model-viewer>
+
 
   <h2>What you need to play the game</h2>
   <p>You only need <strong>2</strong> things to play:</p>
@@ -62,9 +64,8 @@
   <h2>Things of note</h2>
   <h3>Advantage Rule</h3>
   <p>
-    If the spinner spins the puck off the table, the shooter then has
-    advantage. The spinner then spins again, but if the catcher misses/drops
-    the puck they get another spin to try again.
+    If the spinner spins the puck off the table, spin it again, but the shooter has
+    advantage so if they fail to catch, they get another spin to try again.
   </p>
 
   <h3>How to make a goal</h3>

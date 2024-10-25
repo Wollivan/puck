@@ -37,7 +37,7 @@ First to 5 wins.
 
 ### Advantage Rule
 
-If the spinner spins the puck off the table, the shooter then has advantage. The spinner then spins again, but if the catcher misses/drops the puck they get another spin to try again.
+If the spinner spins the puck off the table, spin it again, but the shooter has advantage so if they fail to catch, they get another spin to try again.
 
 ### How to make a goal
 
