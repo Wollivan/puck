@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./model-viewer/styles.css" />
   <link rel="stylesheet" href="./assets/style.css" />
-  <script src="./assets/script.js" defer></script>
+  <script src="./model-viewer/script.js" defer></script>
+  <script src="./assets/app.js" defer></script>
   <title>Puck</title>
   <meta name="description" content="What the Puck?!">
   <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
@@ -14,8 +15,18 @@
 </head>
 
 <body>
-  <h1>Puck&trade;</h1>
-  <h3>A game by Wollivan, what the puck?!</h3>
+  <header>
+    <h1>Puck&trade;</h1>
+    <h3>A game by Wollivan, what the puck?!</h3>
+
+    <nav>
+      <a href="#what-is-this">What is this?</a>
+      <a href="#rules">Rules</a>
+      <a href="#get-a-puck">Get a Puck</a>
+      <a href="#things-to-note">Things to Note</a>
+    </nav>
+  </header>
+
   <model-viewer src="./model-viewer/puck.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
     tone-mapping="neutral" poster="poster.webp" shadow-intensity="0" camera-target="0m 6.5m 0m"
     camera-orbit="20deg 60.5deg 73.59m" field-of-view="31.97deg" auto-rotate>
@@ -30,59 +41,75 @@
     </div>
   </model-viewer>
 
+  <section id="what-is-this">
+    <h2>What is this?</h2>
+    <p>Puck is a game that you can play with any sort of puck, on any sort of table, with any sort of person.</p>
+    <p>You only need <strong>2</strong> things to play with your sort of person:</p>
+    <ul>
+      <li>A <strong>puck</strong></li>
+      <li>A table</li>
+    </ul>
+  </section>
 
-  <h2>What you need to play the game</h2>
-  <p>You only need <strong>2</strong> things to play:</p>
-  <ul>
-    <li>A <strong>puck</strong></li>
-    <li>A table</li>
-  </ul>
-  <p>
-    If you have a 3D printer, you can download the
-    <a href="./puck/puck.stl" download>offical Puck&trade; puck here</a>. I recommend printing with 100% infill for a
-    more satisfying feel.
-  </p>
-  <p>If you have Pucket&trade;, then the pucks are a similar (the exact same) size.</p>
-  <p>Failing that, just cut a 13mm piece of a 35mm dowel.</p>
-  <h2>Rules</h2>
-  <p>Two players either side of a table.</p>
-  <p>One player spins the puck towards their opponent.</p>
-  <p>The opponent then attempts to catch the puck between their thumbs.</p>
-  <p>
-    If they are successful in catching with only their thumbs, the opponent creates
-    a goal with thier hands at the edge of the table.
-  </p>
+  <section id="rules">
+    <h2>Rules</h2>
+    <p>Two players either side of a table.</p>
+    <p>One player spins the puck towards their opponent.</p>
+    <p>The opponent then attempts to catch the puck between their thumbs.</p>
+    <p>
+      If they are successful in catching with only their thumbs, the opponent creates
+      a goal with thier hands at the edge of the table.
+    </p>
 
-  <p>
-    They then try and shoot a goal from where they caught the ball, without repositioning the puck between their thumbs
-    from when they caught it.
-  </p>
+    <p>
+      They then try and shoot a goal from where they caught the ball, without repositioning the puck between their
+      thumbs
+      from when they caught it.
+    </p>
 
-  <p>The spinner and shooter then swap.</p>
+    <p>The spinner and shooter then swap.</p>
 
-  <p>First to 5 wins.</p>
+    <p>First to 5 wins.</p>
+  </section>
 
-  <h2>Things of note</h2>
-  <h3>Advantage Rule</h3>
-  <p>
-    If the spinner spins the puck off the table, spin it again, but the shooter has
-    advantage so if they fail to catch, they get another spin to try again.
-  </p>
+  <section id="get-a-puck">
+    <h2>Get a puck</h2>
+    <div class="get-a-puck">
+      <p><a href="https://github.com/Wollivan/puck/tree/main/puck" target="_blank">Download the STL</a> to print your
+        own,
+        100% infill for best results</p>
+      <p>or</p>
+      <p> <span id="share" class="pretend-link">Send them to your friend</span> with a 3D printer</p>
+      <p>or</p>
+      <p>If you have Pucket&trade;, then the pucks are a similar (the exact same) size.</p>
+      <p>or</p>
+      <p>Failing that, just cut a 13mm piece of a 35mm dowel.</p>
+    </div>
+  </section>
 
-  <h3>How to make a goal</h3>
-  <img src="./assets/fingergoal.png" class="finger-goal-img" alt="finger goal example" />
-  <h3>Dropped the puck before getting to shoot?</h3>
-  <p>Tough luck, so long as your opponent created a goal for you right away.</p>
+  <section id="things-to-note">
+    <h2>Things of note</h2>
+    <h3>Advantage Rule</h3>
+    <p>
+      If the spinner spins the puck off the table, spin it again, but the shooter has
+      advantage so if they fail to catch, they get another spin to try again.
+    </p>
+
+    <h3>How to make a goal</h3>
+    <img src="./assets/fingergoal.png" class="finger-goal-img" alt="finger goal example" />
+    <h3>Dropped the puck before getting to shoot?</h3>
+    <p>Tough luck, so long as your opponent created a goal for you right away.</p>
 
 
-  <h3>Fingers are not thumbs</h3>
-  <p>If any other part of your hand touches the puck, its not a catch.</p>
+    <h3>Fingers are not thumbs</h3>
+    <p>If any other part of your hand touches the puck, its not a catch.</p>
 
-  <h2>Custom Puck&trade;s</h2>
-  <p>
-    You can create your own puck by editing the OpenSCAD model found
-    <a href="./puck/puck.scad" download>here</a>.
-  </p>
+    <h2>Custom Puck&trade;s</h2>
+    <p>
+      You can create your own puck by editing the OpenSCAD model found
+      <a href="https://github.com/Wollivan/puck/tree/main/puck" target="_blank">here</a>.
+    </p>
+  </section>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </body>
 

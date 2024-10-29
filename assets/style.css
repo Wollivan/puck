@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "Amatic SC";
   src: url("./AmaticSC.ttf");
@@ -26,6 +30,7 @@ body {
   width: 70%;
 }
 
+.pretend-link,
 a {
   color: #333;
   text-decoration: none;
@@ -33,6 +38,22 @@ a {
   padding-bottom: 3px;
 }
 
+.pretend-link:hover,
 a:hover {
   font-weight: bold;
+}
+
+.get-a-puck {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.get-a-puck p {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 3rem;
 }
