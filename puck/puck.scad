@@ -36,7 +36,17 @@ module roundedCyl() {
   }
 }
 
-module designs() {
+module sideBottomDesign() {
+  // qr
+  scale([1,1,2])
+    import("../assets/qr.stl");
+
+  // rules text
+  translate([0,0,puckHeight/3.75])
+    roundText(stext);
+}
+
+module topDesign() {
   // top text
   translate([0, -6, puckHeight-1])
     linear_extrude(height=2)
@@ -47,19 +57,6 @@ module designs() {
         scale(0.023)
             import("../assets/fingergoal.svg", center=true);
     }
-  // qr
-  scale([1,1,2])
-    import("../assets/qr.stl");
-
-  // rules text
-  translate([0,0,puckHeight/3.75])
-    roundText(stext);
-}
-
-module logoOnly() {
-  translate([0, 0, puckHeight-1])
-    linear_extrude(height=2)
-      text(text="PUCK", size=10, halign="center", valign="center", font="AmaticSC");
 }
 
 module puck() {
@@ -67,10 +64,10 @@ module puck() {
     roundedCyl();
 
     // simple version
-    // logoOnly();
+    topDesign();
 
     // full version
-    designs();
+    sideBottomDesign();
 
   }
 }
