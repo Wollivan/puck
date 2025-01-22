@@ -36,14 +36,16 @@ module roundedCyl() {
   }
 }
 
-module sideBottomDesign() {
-  // qr
-  scale([1,1,2])
-    import("../assets/qr.stl");
-
+module sideDesign() {
   // rules text
   translate([0,0,puckHeight/3.75])
     roundText(stext);
+}
+
+module bottomDesign() {
+  // qr
+  scale([1,1,2])
+    import("../assets/qr.stl");
 }
 
 module topDesign() {
@@ -67,7 +69,8 @@ module puck() {
     topDesign();
 
     // full version
-    sideBottomDesign();
+    // bottomDesign();
+    // sideDesign();
 
   }
 }
